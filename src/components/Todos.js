@@ -1,8 +1,8 @@
-import {React} from 'react'
+import React from 'react'
 import {connect} from 'react-redux'
 import {
     handleAddTodo,
-    handleRemoveTodo,
+    handleDeleteTodo,
     handleToggle
 } from '../actions/todos'
 import List from './List'
@@ -17,7 +17,7 @@ class Todos extends React.Component {
     }
 
     removeItem =(todo) =>{
-      this.props.store.dispatch(handleRemoveTodo(todo))
+      this.props.store.dispatch(handleDeleteTodo(todo))
     }
 
     toggleItem =(id) => {
